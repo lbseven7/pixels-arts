@@ -1,0 +1,12 @@
+.color {
+  border: solid black 1px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+
+}
+
+#black {
+  background-color: black;
+}
+
