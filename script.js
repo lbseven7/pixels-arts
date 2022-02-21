@@ -1,19 +1,19 @@
 let corAtualSelecionada = 'black';
 
-function trataCor(event) { //
-  let divSelecionada = document.querySelector('.selected');
-  let divAtual = event.target;
+function trataCor(event) {
+  const divSelecionada = document.querySelector('.selected');
+  const divAtual = event.target;
 
   divSelecionada.classList.remove('selected');
   divAtual.classList.add('selected');
   corAtualSelecionada = window.getComputedStyle(divAtual, null).getPropertyValue('background-color');
 }
-// Obtive ajuda de Dilenio Enderle
+// 
 function criaPaleta(colors) {
   const selecionarPaleta = document.getElementById('color-palette');
 
   for (let i = 0; i < colors.length; i += 1) {
-    let criarDiv = document.createElement('div');
+    const criarDiv = document.createElement('div');
     criarDiv.style.backgroundColor = colors[i];
     criarDiv.className = 'color';
     if (colors[i] === 'black') {
@@ -24,40 +24,59 @@ function criaPaleta(colors) {
     selecionarPaleta.appendChild(criarDiv);
   }
 }
-// Obtive ajuda de Dilenio Enderle
-function handlePixel(event) {
-  let colorirDiv = event.target;
+//
+function tratarPixel(event) {
+  const colorirDiv = event.target;
   colorirDiv.style.backgroundColor = corAtualSelecionada;
 }
-// Obtive ajuda de Dilenio Enderle
+//
 function criaQuadro(size) {
   for (let index = 0; index < size; index += 1) {
-    let quadroDePixel = document.getElementById("pixel-board");
-    let criarPixel = document.createElement('div');
-    let classeDaLinha = `row-board${index}`;
+    const quadroDePixel = document.getElementById("pixel-board");
+    const criarPixel = document.createElement('div');
+    const classeDaLinha = `row-board${index}`;
     criarPixel.className = classeDaLinha;
     quadroDePixel.appendChild(criarPixel);
 
-    for (index2 = 0; index2 < size; index2 += 1) {
-      let linhaDoQuadro = document.getElementsByClassName(classeDaLinha)[0];
-      let pixelDaDiv = document.createElement('div');
+    for (i = 0; i < size; i += 1) {
+      const linhaDoQuadro = document.getElementsByClassName(classeDaLinha)[0];
+      const pixelDaDiv = document.createElement('div');
       pixelDaDiv.className = 'pixel';
-      pixelDaDiv.addEventListener('click', handlePixel);
+      pixelDaDiv.addEventListener('click', tratarPixel);
       linhaDoQuadro.appendChild(pixelDaDiv);
     }
     quadroDePixel.appendChild(criarPixel);
   }
 }
-// Obtive ajuda de Dilenio Enderle
+//
 function limpaQuadro() {
-  let clear = document.querySelector('#clear-board');
+  const clear = document.querySelector('#clear-board');
   clear.addEventListener('click', function () {
-    let pixel = document.querySelectorAll('.pixel');
+    const pixel = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].style.backgroundColor = 'white';
     }
   });
 }
+
+//  10 Bônus
+// let input = document.querySelector('#crieSeuQudro');
+// let btnCriarQuadro = document.getElementById('btnCriarQuadro');
+
+// btnCriarQuadro.addEventListener('click', function () {
+//   let tamanhoQuadro = Number(input.value)
+//   usuarioCriando(tamanhoQuadro)
+// });
+
+// function usuarioCriando(size) {
+//   if (number > 5 && number < 50) {
+
+//   }
+
+// }
+
+
+
 
 window.onload = function () {
   criaPaleta(['black', 'red', 'blue', 'yellow']);
