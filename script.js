@@ -8,7 +8,7 @@ function trataCor(event) {
   divAtual.classList.add('selected');
   corAtualSelecionada = window.getComputedStyle(divAtual, null).getPropertyValue('background-color');
 }
-// 
+//
 function criaPaleta(colors) {
   const selecionarPaleta = document.getElementById('color-palette');
 
@@ -70,7 +70,7 @@ function limpaQuadro() {
 
 // function usuarioCriando(size) {
 //   if (number > 5 && number < 50) {
-
+      
 //   }
 
 // }
