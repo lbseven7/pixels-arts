@@ -2,57 +2,41 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Art</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art</title>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <h1 id="title">Paleta de Cores</h1>
+  <h1 id="title">Paleta de Cores</h1>
 
-    <div id="color-palete"></div>
-    <section>
-        <div id="color-palette">
-            <div id="black" class="color selected"></div>
-            <div id="yellow" class="color"></div>
-            <div id="red" class="color"></div>
-            <div id="green" class="color"></div>
-        </div>
+  <section>
+    <div id="color-palette" class="palette"></div>
+  </section>
 
-        <div id="pixel-board">
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
+  <section>
+      <div>
+      <button id="clear-board">Limpar</button>
+      </div>
+      <section>
+      <input id="board-size" type="number" name="quantidade" min="0 max=" 50>
+      <button id="generate-board">VQV</button>
+      </section>
 
-    </section>
+  </section>
+
+  <div id="pixel-board" class="board"></div>
 
 
+
+
+
+  <script src="script.js"></script>
+
+  <footer>@leobarbosa - Turma 19C</footer>
 </body>
 
 </html>
