@@ -6,7 +6,8 @@ function trataCor(event) {
 
   divSelecionada.classList.remove('selected');
   divAtual.classList.add('selected');
-  corAtualSelecionada = window.getComputedStyle(divAtual, null).getPropertyValue('background-color');
+  corAtualSelecionada = window.getComputedStyle(divAtual, null)
+  .getPropertyValue('background-color');
 }
 //
 function criaPaleta(colors) {
@@ -24,7 +25,7 @@ function criaPaleta(colors) {
     selecionarPaleta.appendChild(criarDiv);
   }
 }
-//
+// 
 function tratarPixel(event) {
   const colorirDiv = event.target;
   colorirDiv.style.backgroundColor = corAtualSelecionada;
@@ -59,6 +60,8 @@ function limpaQuadro() {
   });
 }
 
+
+
 //  10 Bônus
 // let input = document.querySelector('#crieSeuQudro');
 // let btnCriarQuadro = document.getElementById('btnCriarQuadro');
@@ -70,7 +73,7 @@ function limpaQuadro() {
 
 // function usuarioCriando(size) {
 //   if (number > 5 && number < 50) {
-      
+
 //   }
 
 // }
